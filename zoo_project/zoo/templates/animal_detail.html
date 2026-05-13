@@ -1,0 +1,13 @@
+{% extends 'zoo/base.html' %}
+{% block title %}{{ animal.name }} — Зоопарк{% endblock %}
+{% block content %}
+<div class="card bg-dark text-white">
+    <div class="card-body">
+        <h2>{{ animal.name }} ({{ animal.species }})</h2>
+        <p><strong>Здоровье:</strong> {{ animal.health }}</p>
+        <p><strong>Корпус:</strong> {{ animal.description }}</p>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Назад к списку</a>
+        <button class="btn btn-success">Купить это животное</button>
+    </div>
+</div>
+{% endblock %}
